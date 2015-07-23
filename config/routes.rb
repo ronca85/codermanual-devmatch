@@ -1,4 +1,4 @@
-Rails.application.routes.draw do
+Your_Rails_Application_Folder_name::Application.configure do
   root 'pages#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
