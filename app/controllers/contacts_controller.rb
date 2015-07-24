@@ -10,10 +10,10 @@ class ContactsController < ApplicationController
       email = params[:contact][:email]
       body = params[:contact][:comments]
       ContactMailer.contact_email(name, email, body).deliver
-      flash[:success] = 'Message sent.'
+      flash[:success] = 'Poruka poslana!'
       redirect_to new_contact_path
     else
-      flash[:danger] = 'Error occured, message has not been sent.'
+      flash[:danger] = 'Poruka nije poslana! Ispuni sva polja!'
       redirect_to new_contact_path
     end
   end
